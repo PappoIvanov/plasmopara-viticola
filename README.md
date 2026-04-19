@@ -1,8 +1,7 @@
 # Grapevine Downy Mildew and Climate — A Data Science Analysis
 
 **SoftUni Data Science Program — Final Exam Project**
-**Author:** Plamen Ivanov
-**Deadline:** April 28, 2026
+**Author:** Pavel Ivanov
 
 ---
 
