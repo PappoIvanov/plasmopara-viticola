@@ -137,4 +137,5 @@ jupyter lab
 
 ## License
 
-This project is submitted as academic work for SoftUni. Data sources are used under their respective open licenses (CC-BY, CC0).
+The code and analysis in this repository are released under the MIT License.
+Data sources are used under their respective open licenses (CC-BY, CC0).
