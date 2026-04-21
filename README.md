@@ -56,11 +56,9 @@ Plasmopara Viticola/
 ├── requirements.txt
 ├── data/
 │   ├── raw/                  # Original, unmodified source files
-│   ├── processed/            # Cleaned and transformed data
-│   └── cleaned/
+│   └── processed/            # Cleaned and transformed data
 ├── notebooks/
 │   └── grapevine_downy_mildew_analysis.ipynb   # Main analysis notebook
-├── references/               # Papers, methodology notes
 └── notes/
 ```
 
