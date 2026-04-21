@@ -7,6 +7,12 @@
 
 ---
 
+## Project Motivation
+
+This project sits at the intersection of two areas I care about. My background is in agricultural science in Bulgaria; on the other hand I have close family ties to the farming sector. The choice of topic is therefore not accidental — beyond fulfilling the requirements of the SoftUni Data Science programme, this analysis is a personal exploration of how data science and artificial intelligence can be integrated into Bulgarian agriculture to support more informed, evidence-based decisions in different farming areas.
+
+---
+
 ## Research Question
 
 > Under which meteorological conditions does *Plasmopara viticola* (grapevine downy mildew) appear in European vineyards, and which periods of the year carry the highest infection risk for Bulgarian wine-growing regions?
@@ -106,7 +112,7 @@ jupyter lab
 
 - **89.1%** of GBIF occurrence records were observed under temperatures ≥ 11 °C, consistent with the Goidanich primary infection threshold.
 - All four weather variables tested (May/June precipitation, April/May temperature) show statistically significant differences between high- and low-incidence site-years in the Bordeaux dataset (**p < 0.001**, both Welch's t-test and Mann-Whitney U).
-- A logistic regression model trained on spring weather variables achieves **ROC-AUC = 0.736**, confirming meaningful predictive signal.
+- A logistic regression model trained on spring weather variables achieves **ROC-AUC = 0.736 on the held-out test set (5-fold CV mean: 0.755 ± 0.076)**, confirming meaningful predictive signal.
 - Among four Bulgarian wine regions (2010–2023), the **Danube Plain (Pleven)** accumulates the highest infection risk (133 Goidanich risk days), with **June** as the peak risk month across all regions.
 - A 1–2 month temporal lag is observed between peak infection-risk conditions (May–June) and peak symptom observations in GBIF data (July–August), consistent with the known incubation period of *P. viticola*.
 
