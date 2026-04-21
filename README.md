@@ -71,10 +71,13 @@ Plasmopara Viticola/
 1. **Exploratory Data Analysis (EDA)** — distributions, correlations, temporal and spatial patterns
 2. **Data Cleaning & Hygiene** — handling missing values, type corrections, outlier inspection
 3. **Weather Matching** — linking each GBIF occurrence to local weather conditions via the Open-Meteo API
-4. **Hypothesis Testing** — Mann-Whitney U test and Welch's t-test to compare weather conditions at outbreak vs. non-outbreak periods
-5. **Logistic Regression** — modeling probability of high disease incidence as a function of monthly weather variables (Bordeaux dataset)
-6. **Risk Assessment** — applying learned thresholds to Bulgarian climate data to identify seasonal risk windows
-7. **Interactive Dashboard** — Plotly visualisation of infection risk by region, year and month for four Bulgarian wine-growing regions
+4. **Weather Conditions at Occurrence** — characterising the meteorological conditions on the day of each confirmed GBIF observation and testing consistency with the Goidanich temperature threshold
+5. **Hypothesis Testing** — Mann-Whitney U test and Welch's t-test to compare weather conditions at outbreak vs. non-outbreak periods
+6. **Logistic Regression** — modeling probability of high disease incidence as a function of monthly weather variables (Bordeaux dataset)
+7. **Risk Assessment** — applying learned thresholds to Bulgarian climate data to identify seasonal risk windows
+8. **Logistic Regression — Bulgarian Regions** — applying the trained model to ERA5 monthly aggregates to estimate P(high incidence) per region and year
+9. **Trend Analysis** — linear regression of Goidanich risk days against year to test for a directional climate signal (2010–2023)
+10. **Interactive Dashboard** — Plotly visualisation of infection risk by region, year and month for four Bulgarian wine-growing regions
 
 ---
 
@@ -115,6 +118,8 @@ jupyter lab
 - A logistic regression model trained on spring weather variables achieves **ROC-AUC = 0.736 on the held-out test set (5-fold CV mean: 0.755 ± 0.076)**, confirming meaningful predictive signal.
 - Among four Bulgarian wine regions (2010–2023), the **Danube Plain (Pleven)** accumulates the highest infection risk (133 Goidanich risk days), with **June** as the peak risk month across all regions.
 - A 1–2 month temporal lag is observed between peak infection-risk conditions (May–June) and peak symptom observations in GBIF data (July–August), consistent with the known incubation period of *P. viticola*.
+- Applying the logistic regression model to Bulgarian ERA5 data confirms the Goidanich findings: the **Black Sea** and **Danube Plain** regions show the highest P(high incidence) scores, while the **Struma Valley** consistently records the lowest, reflecting its drier Mediterranean-influenced climate.
+- Linear trend analysis over 2010–2023 finds **no statistically significant trend** in Goidanich risk days for any region (p > 0.05, R² ≤ 0.14) — inter-annual variability dominates over any directional climate signal in this period.
 
 ---
 
